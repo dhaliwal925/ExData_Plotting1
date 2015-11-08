@@ -33,7 +33,7 @@ with(data, plot(DateTime,Voltage, type = "l", xlab = "datetime", ylab = "Voltage
 with(data, plot(DateTime,Sub_metering_1, type = "l", col = "black", xlab = "", ylab = "Energy sub metering", cex.lab = 0.75, cex.axis = 0.75))
 with(data, points(DateTime,Sub_metering_2, type = "l", col = "red"))
 with(data, points(DateTime,Sub_metering_3, type = "l", col = "blue"))
-legend("top", legend = c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"), col = c("black", "red", "blue"), lty = 1, bty = "n", cex = 0.75) 
+legend("topright", legend = c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"), col = c("black", "red", "blue"), lty = 1, text.width = strwidth("Sub_metering_3"), bty = "n", cex = 0.75) 
 
 ## Plot Global reactive Power vs. Time
 with(data, plot(DateTime,Global_reactive_power, type = "l", xlab = "datetime", ylab = "Global_reactive_power", cex.lab = 0.75, cex.axis = 0.75))

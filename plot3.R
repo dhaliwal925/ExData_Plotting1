@@ -17,11 +17,11 @@ rm(header)
 data$Date <- as.Date(data$Date, format = "%d/%m/%Y")
 data$DateTime <- strptime(paste(data$Date, data$Time), format = "%Y-%m-%d %H:%M:%S")
 
-## Plot a histogram
+## Plot energy sub metering vs time.
 with(data, plot(DateTime,Sub_metering_1, type = "l", col = "black", xlab = "", ylab = "Energy sub metering", cex.lab = 0.75, cex.axis = 0.75))
 with(data, points(DateTime,Sub_metering_2, type = "l", col = "red"))
 with(data, points(DateTime,Sub_metering_3, type = "l", col = "blue"))
-legend("topright", legend = c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"), col = c("black", "red", "blue"), lty = 1, cex = 0.75) 
+legend("topright", legend = c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"), col = c("black", "red", "blue"), lty = 1, text.width = strwidth("Sub_metering_3"), cex = 0.75) 
 
 ## Copy graph to a png file
 dev.copy(png, file = "plot3.png", width = 480, height = 480)

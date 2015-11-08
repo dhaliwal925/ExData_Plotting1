@@ -17,7 +17,7 @@ rm(header)
 data$Date <- as.Date(data$Date, format = "%d/%m/%Y")
 data$DateTime <- strptime(paste(data$Date, data$Time), format = "%Y-%m-%d %H:%M:%S")
 
-## Plot a histogram
+## Plot Global active power vs. time
 with(data, plot(DateTime,Global_active_power, type = "l", xlab = "", ylab = "Global Active Power (kilowatts)", cex.lab = 0.75, cex.axis = 0.75))
 
 ## Copy graph to a png file
